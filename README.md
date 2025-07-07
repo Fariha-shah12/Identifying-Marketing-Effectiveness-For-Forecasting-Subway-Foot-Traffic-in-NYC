@@ -8,9 +8,8 @@ This project investigates how different marketing channels impact store visit tr
 * **Techniques Used**:
 
   * **XGBoost** for supervised regression
-  * **SARIMA/Prophet** for forecasting visit trends
   * **SHAP** for explainable AI (feature attribution)
-* **Platform**: Databricks (for scalable notebook development and data processing)
+
 
 ## 📅 Dataset
 
@@ -30,44 +29,25 @@ This project investigates how different marketing channels impact store visit tr
 
 * Trained to predict `num_visits`
 * Evaluated using RMSE and R²
-* Hyperparameter tuning via `hyperopt`
+* Hyperparameter tuning via `RandomizedSearchCV`
 * SHAP used to assess feature importance
 
-### Time Series Forecasting
-
-* SARIMA and Prophet applied to `num_visits` for future trend predictions
-* Seasonal patterns and holidays considered in forecasting
-
-## 📊 Results Summary
-
-| Model   | RMSE     | R² Score |
-| ------- | -------- | -------- |
-| XGBoost | 59.23    | 0.91     |
-| Prophet | \~ 62.14 | --       |
 
 * **Top Features**:
 
   * Social media likes and landing page visits had the highest SHAP impact.
   * Weekends showed stronger correlation with higher visits due to social engagement.
 
-## 🔹 Key Visuals
-
-* ![SHAP Plot](images/shap_summary.png)
-* ![Forecast Plot](images/prophet_forecast.png)
-* ![Databricks Flow](images/databricks_architecture.png)
 
 ## 📓 Notebooks
 
-* `notebooks/EDA.ipynb` - Data exploration and preprocessing
-* `notebooks/XGBoost_Model.ipynb` - Model training and evaluation
-* `notebooks/SHAP_Interpretation.ipynb` - Feature attribution
-* `notebooks/Prophet_SARIMA_Forecasting.ipynb` - Time series analysis
+* `NYC-SubWay-Foot-Traffic.ipynb` - Data exploration and preprocessing and model implementation
 
 ## 🚀 Getting Started
 
 ```bash
 # Clone the repo
-https://github.com/Fariha-shah12/campaign-foot-traffic
+https://github.com/Fariha-shah12/Identifying-Marketing-Effectiveness-For-Forecasting-Subway-Foot-Traffic-in-NYC.git
 
 # Install dependencies
 pip install -r requirements.txt
