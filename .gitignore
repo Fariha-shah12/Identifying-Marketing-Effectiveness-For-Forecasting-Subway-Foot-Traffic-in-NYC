@@ -1,0 +1,6 @@
+# Ignore Visual Studio generated folders/files
+.vs/
+*.suo
+*.user
+*.cache
+*.vsidx
